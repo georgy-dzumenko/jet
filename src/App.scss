@@ -4,6 +4,22 @@ $color-accent: #7C9AF9;
 $color-grey: #62687A;
 $color-blend: #637BC7;
 
+@font-face {
+  font-family: 'Vinnytsia';
+  src: url(./assets/fonts/VinnytsiaSans-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Vinnytsia';
+  src: url(./assets/fonts/VinnytsiaSans-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @keyframes bgmove {
   0% {
     background-position-y: 100%;
@@ -14,25 +30,27 @@ $color-blend: #637BC7;
 }
 
 .App {
-  // background: radial-gradient($color-blend, $color-dark);
+  background: linear-gradient(20deg, $color-accent, $color-dark);
+  // background: $color-dark;
   background-size: 100% 200%;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  perspective: 1000px;
 
   &::after {
     content: "";
     background-image: url(./assets/message.png);
-    filter: invert(1) blur(2px);
+    filter: invert(1) blur(1px);
     position: absolute;
     display: flex;
     width: 200%;
     height:350%;
     opacity: 0.03;
     background-repeat: repeat;
-    background-size: 70px;
-    transform: rotateZ(20deg) translate(-50%, -50%);
-    animation: 120s bgmove linear infinite;
+    background-size: 60px;
+    transform: rotateX(10deg) rotateY(15deg) rotateZ(20deg) translate(-50%, -50%);
+    animation: 150s bgmove linear infinite;
   }
 }
 
@@ -46,6 +64,10 @@ $color-blend: #637BC7;
   font-weight: bold;
   position: relative;
   overflow: hidden;
+  font-family: Vinnytsia;
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 
   &__text {
     filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.208))
