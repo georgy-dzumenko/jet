@@ -1,7 +1,53 @@
-.links-list {
-  background-color: pink;
-  
-  &__link {
-    color: tomato;
+$color-dark: hsl(226, 33%, 36%);
+$color-light: #C9D4FB;
+$color-accent: #7C9AF9;
+$color-grey: #62687A;
+$color-blend: #637BC7;
+
+@keyframes bgmove {
+  0% {
+    background-position-y: 100%;
+  };
+  100% {
+    background-position-y: -100%;
   }
+}
+
+.App {
+  // background: radial-gradient($color-blend, $color-dark);
+  background-size: 100% 200%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    background-image: url(./assets/message.png);
+    filter: invert(1) blur(2px);
+    position: absolute;
+    display: flex;
+    width: 200%;
+    height:350%;
+    opacity: 0.03;
+    background-repeat: repeat;
+    background-size: 70px;
+    transform: rotateZ(20deg) translate(-50%, -50%);
+    animation: 120s bgmove linear infinite;
+  }
+}
+
+.header {
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $color-light;
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+  overflow: hidden;
+
+  &__text {
+    filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.208))
+  };
 }

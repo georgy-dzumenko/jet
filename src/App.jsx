@@ -7,7 +7,9 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        Повідомлення викладачу у ПК і на електронну пошту.
+        <div className="header__text">
+          Повідомлення викладачу у ПК і на електронну пошту.
+        </div>
       </div>
       <div className="links-list">
         Повідомлення: 
