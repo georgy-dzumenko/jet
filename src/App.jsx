@@ -12,22 +12,28 @@ function App() {
         </div>
       </div>
       <div className="links-list">
-        Повідомлення: 
-        {["Вхідні", "Групам", "Студентам", "Викладачам", "Надіслані"].map((a) => (
-          <a href="#" className="links-list__link">
-            {a}
-          </a>
-        ))}
+        <div className="links-list__label">
+          Повідомлення
+        </div>
+        <div className="links-list__list">
+          {["Вхідні", "Групам", "Студентам", "Викладачам", "Надіслані"].map((a) => (
+            <a href="#" className="links-list__link">
+              {a}
+            </a>
+          ))}
+        </div>
       </div>
       <div className="to-whom">
         <input placeholder="кому" type="text" className="to-whom__input" />
       </div>
       <div className="message-text">
-        <textarea style={{resize: "none"}} placeholder='Текст повідомлення' />
+        <textarea style={{resize: "none"}} placeholder='Текст повідомлення' className='what-whom__area'/>
         <button className="message-text__button message-text__button--attach">
-          <img src={attachIcon} className="message-text__button_icon message-text__button_icon--attach"/>
+          Прикріпити файл
+          <img src={attachIcon} className="message-text__button_icon message-text__button_icon--attach "/>
         </button>
-        <button className="message-text__button message-text__button--send">
+        <button className="message-text__button message-text__button--send ">
+          Надіслати повідомлення
           <img src={sendIcon} className="message-text__button_icon message-text__button_icon--send"/>
         </button>
       </div>
