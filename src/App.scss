@@ -40,7 +40,9 @@ $color-blend: #4C3DA3;
   position: relative;
   overflow: hidden;
   perspective: 1000px;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   &::after {
     content: "";
     z-index: -1;
@@ -318,4 +320,40 @@ $color-blend: #4C3DA3;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.massage-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid $color-light;
+    backdrop-filter: blur(3px);
+    padding-bottom: 30px;
+    
+}
+
+.Our-githubs{
+    font-size: 30px;
+    font-weight: 700;
+    color: $color-light;
+}
+
+.links-footer__list{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.links-footer__link{
+    text-decoration: none;
+    color: $color-light;
+    cursor: pointer;
+}
+
+.footer-massage{
+    color: $color-light;
 }

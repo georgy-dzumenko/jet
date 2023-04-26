@@ -110,29 +110,57 @@ function MessageTextField() {
   )
 }
 
-function App() {
-  return (
-    <div className="App">
-      <div className="header">
-        <div className="header__text">
-          Повідомлення викладачу у ПК і на електронну пошту.
-        </div>
+function Footer(){
+  return(
+    <div className="massage-footer">
+      <div className="Our-githubs">
+        Our Githubs
       </div>
-      <div className="links-list">
-        <div className="links-list__label">
-          Повідомлення
-        </div>
-        <div className="links-list__list">
-          {["Вхідні", "Групам", "Студентам", "Викладачам", "Надіслані"].map((a) => (
-            <a href="#" className="links-list__link">
-              {a}
+      <div className="links-footer__list">
+          {[
+            {name: "Vlad`s GitHub", href: "https://github.com/VladIshchuk"}, 
+            {name: "Goga`s GitHub", href: "https://github.com/georgy-dzumenko"}].map((a) => (
+            <a href={a.href} className="links-footer__link">
+              {a.name}
             </a>
           ))}
         </div>
+        <div className="footer-massage">
+          Саме так може виглядати JetIQ в майбутьному, при умові якщо ви погодитесь співпрацювати з нами
+        </div>
+    </div>
+  )
+}
+
+function App() {
+  return (
+    <div className="App">
+      <div>
+        <div className="header">
+          <div className="header__text">
+            Повідомлення викладачу у ПК і на електронну пошту.
+          </div>
+        </div>
+        <div className="links-list">
+          <div className="links-list__label">
+            Повідомлення
+          </div>
+          <div className="links-list__list">
+            {["Вхідні", "Групам", "Студентам", "Викладачам", "Надіслані"].map((a) => (
+              <a href="#" className="links-list__link">
+                {a}
+              </a>
+            ))}
+          </div>
+        </div>
+        <MessageTextField/>
       </div>
-      <MessageTextField/>
+      <Footer></Footer>
     </div>
   );
+
+
 }
+
 
 export default App;
