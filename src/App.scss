@@ -31,7 +31,6 @@ $color-blend: #637BC7;
 
 .App {
   background: linear-gradient(20deg, $color-accent, $color-dark);
-  // background: $color-dark;
   background-size: 100% 200%;
   height: 100vh;
   position: relative;
@@ -73,3 +72,86 @@ $color-blend: #637BC7;
     filter: drop-shadow(0 2px 7px rgba(0, 0, 0, 0.208))
   };
 }
+
+.links-list__label{
+    color: $color-light;
+    font-weight: bold;
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.links-list__link{
+    color: white;
+text-decoration: none;
+}
+
+.links-list__list{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.to-whom__input{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    height: 20px;
+    width: 220px;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.message-text{
+    display: flex;
+    flex-direction: column
+}
+
+.what-whom__area{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    width: 420px;
+    height: 100px;
+    margin-bottom: 30px;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.message-text__button{
+    width: 250px;
+    height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.message-text__button_icon{
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.message-text__button--attach{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-text__button:hover,
+.message-text__button:focus{
+    background-color: $color-accent;
+}
+
+.links-list__link:hover,
+.links-list__link:focus{
+    color: $color-blend;
+}
+
